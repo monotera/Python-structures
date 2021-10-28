@@ -37,6 +37,7 @@ TAD LinkedList:
     delete(pos)
     empty() = deletes all elements
     print()
+    reverse()
     
 
 Print():

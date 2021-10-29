@@ -159,17 +159,50 @@ class binary_tree:
         print("")
         
     
-    def size():
-        pass
+    def size(self):
+        return self.size_aux(self.head) + 1
     
-    def height():
-        pass
+    def size_aux(self,node):
+        left_sum = 0
+        right_sum = 0
+        
+        if self.is_leaf(node):
+            return 0
+        
+        if node.left != None:
+            left_sum = self.size_aux(node.left) + 1
+        if node.right != None:
+            right_sum = self.size_aux(node.right) + 1
+        
+        return left_sum + right_sum
     
-    def size_aux():
-        pass
+    def height(self):
+        return self.height_aux(self.head)
     
-    def height_aux():
-        pass
+    def height_aux(self,node):
+        height = 0
+        height_left = 0
+        height_right = 0
+        
+        if self.is_leaf(node):
+            return height
+        
+        if node.left != None:
+            height_left = self.height_aux(node.left) + 1
+            
+        if node.right != None:
+            height_right = self.height_aux(node.right) + 1
+        
+        if height_right > height_left:
+            height = height_right
+            
+        else:
+            height = height_left
+        
+        return height
+        
+    def is_leaf(self,node):
+        return node.left == None and node.right == None
     
     
     
@@ -191,5 +224,8 @@ print("In-order")
 bt.in_order()
 print("Level-order")
 bt.level_order()
-
+print("Height")
+print(bt.height())
+print("Size")
+print(bt.size())
 

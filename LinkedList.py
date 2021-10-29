@@ -3,7 +3,7 @@ Created on Sat Oct 23 19:38:17 2021
 
 @author: Nelson Mosquera (Monotera)
 
-@Taken from: www.geeksforgeeks.org
+@Theory Taken from: www.geeksforgeeks.org
 
 Linked list
 A linked list is represented by a pointer to the first node of the linked list. 
